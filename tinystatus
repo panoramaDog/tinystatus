@@ -81,7 +81,7 @@ body { font-family: segoe ui,Roboto,Oxygen-Sans,Ubuntu,Cantarell,helvetica neue,
 h1 { margin-top: 30px; }
 ul { padding: 0px; }
 li { list-style: none; margin-bottom: 2px; padding: 5px; border-bottom: 1px solid #ddd;  }
-.container { max-width: 600px; width: 100%; margin: 15px auto; }
+.container { max-width: 65rem; width: 100%; margin: 15px auto; }
 .panel { text-align: center; padding: 10px; border: 0px; border-radius: 5px; }
 .failed-bg  { color: white; background-color: #E25D6A; }
 .success-bg { color: white; background-color: #52B86A; }
@@ -114,6 +114,8 @@ done
 cat << EOF
 </ul>
 <p class=small> Last check: $(date +%FT%T%z)</p>
+<p class=small> Checks are made every minute. <b>Press "ctrl+r" to refresh</b></p>
+<p class=small> Tinystatus on <a href="https://github.com/bderenzo/tinystatus"> GitHub</a></p>
 EOF
 if [ -f "${INCIDENTS_FILE}" ]; then
     echo '<h1>Incidents</h1>'
